@@ -30,5 +30,4 @@ RUN pip install -r requirements.txt
 
 USER sitewomen
 
-# change test web server on gunicorn ???
-CMD ["python3", "manage.py", "runserver", "localhost:8080"]
+CMD ["gunicorn", "sitewomen.wsgi:application", "-b", "0.0.0.0:8000"]
