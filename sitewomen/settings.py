@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'captcha',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -87,8 +89,8 @@ WSGI_APPLICATION = 'sitewomen.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.postgresql",
-        # 'HOST': 'localhost',
-        'HOST': os.getenv('POSTGRES_HOST'),
+        'HOST': 'localhost',
+        # 'HOST': os.getenv('POSTGRES_HOST'),
         'PORT': os.getenv('POSTGRES_PORT'),
         'USER': os.getenv('POSTGRES_USER'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
